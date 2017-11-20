@@ -64,7 +64,7 @@ class Eins_log {
 		{
 			$message .= "[$msg]";
 		}
-		if(count($data)>0 && is_array($data))
+		if(is_array($data))
 		{
 			$message .= "\n\t[".json_encode($data)."]";
 		}
