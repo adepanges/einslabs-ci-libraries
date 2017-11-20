@@ -60,11 +60,13 @@ class Eins_log {
 		{
 			$message .= "[$class_method]";
 		}
+
 		if(!empty($msg))
 		{
 			$message .= "[$msg]";
 		}
-		if(is_array($data))
+
+		if(is_array($data) || is_object($data))
 		{
 			$message .= "\n\t[".json_encode($data)."]";
 		}
